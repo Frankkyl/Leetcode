@@ -1,1 +1,2 @@
-1. linkedlist: method of get(), how to get the nth items.
+1. linkedlist: method of get(), next(), how to get the nth items.
+2. iterator, http://jnotnull.iteye.com/blog/262379, http://swiftlet.net/archives/1272
