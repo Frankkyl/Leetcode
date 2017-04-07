@@ -1,3 +1,21 @@
 1. linkedlist: method of get(), next(), how to get the nth items.
 2. iterator, http://jnotnull.iteye.com/blog/262379, http://swiftlet.net/archives/1272
-3. linkedlist: do we have to specify a <T> in linkedlist when we initial it?
+3. linkedlist: do we have to specify a <String> or <Integer>in linkedlist when we initial it?
+4. leetcode2: add two numbers, dont neen print "->" as mentioned in output? 
+5. leetcode2: add two numbers,题目说的是给两个“linked list”, 但是到了题里，public ListNode addTwoNumbers(ListNode l1, ListNode l2)， 怎么变成给了两个ListNode了？
+6. import java.util.*; 要自己写进solution?
+7. why if(carry) is before the code if(sum>=10)? it should be after ? https://discuss.leetcode.com/topic/11463/java-o-n-   solution-very-easy-to-understand
+                if(carry)           //check carry
+                    sum++;
+                    
+                if(sum>=10){        //check overflow
+                    sum=sum-10;
+                    carry=true;
+                }
+                else
+                    carry=false;
+8. 像这种重新定义新的两个node，其实是画蛇添足？因为l1,l2可直接用？https://discuss.leetcode.com/topic/67420/java-solution-beats-99-6-which-is-lucid-and-readable
+        ListNode head1 = l1;
+        ListNode head2 = l2;
+9. helper内调用helper不是死循环？
+10.main 输出node error:cant cast to Integer
