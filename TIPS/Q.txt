@@ -19,3 +19,5 @@
         ListNode head2 = l2;
 9. helper内调用helper不是死循环？
 10.main 输出node error:cant cast to Integer
+11. 都是从0开始？ListNode dummy = new ListNode(0);
+12. 会不会反向左进一？
