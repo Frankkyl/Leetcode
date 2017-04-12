@@ -1,0 +1,81 @@
+//this still error for return value, no saving the data during the look
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+
+import java.util.*;
+
+public class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+
+        HashMap<Integer, ListNode> hm1=new HashMap();
+        HashMap<Integer, ListNode> hm2=new HashMap();
+        int nums1=0;
+        int nums2=0;
+        ListNode a0=new ListNode(0);
+        while(l1!=null){
+            hm1.put(nums1,l1);
+            l1=l1.next;
+            nums1++;
+        }
+        while(l2!=null){
+            hm2.put(nums2,l2);
+            l2=l2.next;
+            nums2++;
+        }
+        if(nums1>nums2){
+            while(nums1>nums2){
+                nums2++;
+                hm2.put(nums2, a0);
+            }
+        }else{
+            while(nums1<nums2){
+                nums1++;
+                hm1.put(nums1,a0);
+            }
+        }
+
+        int[] int1=new int[Math.max(hm1.size(),hm2.size())];
+        int[] int2=new int[Math.max(hm1.size(),hm2.size())];
+        for(int i=0;i<Math.max(hm1.size(),hm2.size());i++){
+            int1[i]= hm1.get(i).val;
+            int2[i]= hm2.get(i).val;
+        }
+        ListNode l3=null;
+        for(int i=0;i<Math.max(hm1.size(),hm2.size());i++){
+            if((i==Math.max(hm1.size(),hm2.size())-1) && (int1[i]+int2[i]) / 10 >0) {
+                l3.next= new ListNode(((int1[i] + int2[i]) % 10) + ((int1[i - 1] + int2[i - 1]) / 10));
+                l3.next.next = new ListNode((int1[i] + int2[i]) / 10);
+            }else if(i==0){
+                l3=new ListNode(int1[0]+int2[0]);
+            }else{
+                l3.next=new ListNode(((int1[i]+int2[i]) % 10) + ((int1[i-1]+int2[i-1]) / 10));
+                l3=l3.next;
+            }
+
+        }
+        return l3;
+
+    }
+    public static void main(String[] args){
+        ListNode lst1=new ListNode(2);
+        lst1.next=new ListNode(4);
+        lst1.next.next=new ListNode(3);
+        ListNode lst2=new ListNode(5);
+        lst2.next=new ListNode(6);
+        lst2.next.next=new ListNode(4);
+
+        Solution sl= new Solution();
+        ListNode newNode = sl.addTwoNumbers(lst1,lst2);
+        while(newNode!=null){
+            System.out.print(newNode.val + " ");
+            newNode = newNode.next;
+        }
+    }
+}
