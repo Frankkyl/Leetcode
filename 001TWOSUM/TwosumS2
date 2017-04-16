@@ -1,0 +1,31 @@
+import java.util.Arrays;
+import java.util.HashMap;
+
+public class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] newArray = new int[2];
+        HashMap<Integer, Integer> hm=new HashMap();
+
+        for(int i=0;i<nums.length;i++){
+            hm.put(i,nums[i]);
+        }
+        for(int i=0;i<nums.length;i++){
+            if(hm.containsValue(target-nums[i])){
+                newArray[0]=i;
+                for(int j=i+1;j<nums.length;j++){
+                    if(nums[j]==target-nums[i]){
+                        newArray[1]=j;
+                        j=nums.length;//if u missing this, the nums[0] would still be updated by next i
+                        i=nums.length;
+                    }
+                }
+            }
+        }
+        return newArray;
+    }
+    public static void main(String[] args){
+        int[]nums={2, 7, 11, 15};
+        Twosum1 ts=new Twosum1();
+        System.out.println(Arrays.toString((ts.twoSum(nums,9))));
+    }
+}
