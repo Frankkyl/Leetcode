@@ -1,4 +1,4 @@
-public class Twosum1 {
+public class Solution{//no change for class name, easy for testing...
     public int[] twoSum(int[] nums, int target) {
         int[] newArray=new int[2];
         for(int i=0;i<nums.length;i++){
