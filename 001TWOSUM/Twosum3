@@ -1,0 +1,22 @@
+public class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] newArray = new int[2];
+        HashMap<Integer, Integer> hm=new HashMap();
+
+        for(int i=0;i<nums.length;i++){
+            hm.put(i,nums[i]);
+        }
+        for(int i=0;i<nums.length;i++){
+            if(hm.containsValue(target-nums[i])&&nums[i]!=target/2){//&&nums[i]!=target/2 this doesnt work when we have two int both=target/2...
+                newArray[0]=i;
+                i=nums.length;
+            }
+        }
+        for(int j=newArray[0]+1;j<nums.length;j++){
+            if(nums[j]==target-nums[newArray[0]]){
+                newArray[1]=j;
+            }
+        }
+        return newArray;
+    }
+}
