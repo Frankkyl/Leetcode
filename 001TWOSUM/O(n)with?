@@ -1,0 +1,17 @@
+import java.util.*;
+public class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] result = new int[2];
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();//https://discuss.leetcode.com/topic/2447/accepted-java-o-n-solution sth. wrong with this O(n) solution?
+        for (int i = 0; i < nums.length; i++) { // and if we have duplicate in nums, it goes wrong...
+            if (map.containsKey(target - nums[i])) {
+                result[1] = i + 1;
+                result[0] = map.get(target - nums[i]);
+                return result;
+            }
+            map.put(nums[i], i + 1);
+        }
+        return result;
+    }
+}
+//why this top start code I run with wrong output? and why Map = new HashMap, not HashMap = new HashMap?
