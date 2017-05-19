@@ -3,6 +3,6 @@
 2. small functions could also be setup as subfunction under the solution class.
 3. LinkedList:node=node.next;
 4. Binary Search:
-   mid: GOOD:"用代码中的方式获得"
+   mid: GOOD:begin+(end-begin)/2;
         BAD:(begin+end)/2, cause corner case:(begin+end) > Integer.MAX_VALUE;
 5. 
