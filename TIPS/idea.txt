@@ -5,3 +5,4 @@
 4. Binary Search:
    mid: GOOD:"用代码中的方式获得"
         BAD:(begin+end)/2, cause corner case:(begin+end) > Integer.MAX_VALUE;
+5. 
