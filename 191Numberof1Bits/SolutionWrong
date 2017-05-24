@@ -1,0 +1,21 @@
+public class Solution {
+    // you need to treat n as an unsigned value
+    public int hammingWeight(int n) {
+        String intoStr=Integer.toBinaryString(n);
+        int i=0;
+        int sum=0;
+        while(i<intoStr.length()){
+            if(intoStr.charAt(i)!=0){
+                sum++;
+            }
+            
+            i++;
+        }
+        return Character.getNumericValue(sum);
+    }
+    public static void main(String[] args){
+
+        Solution sl= new Solution();
+        System.out.println(sl.hammingWeight(0));
+    }
+}
