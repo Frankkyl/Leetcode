@@ -12,3 +12,4 @@
    'A' - 'A' == 0
    'B' - 'A' == 1
    'C' - 'A' == 2
+   To understand this, you should understand, that Java treats char the same as (unsigned) short. Hence, you can make            calculations with char
