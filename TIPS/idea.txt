@@ -9,3 +9,6 @@
 6. The statement ++array[s.charAt(i) - 'A']; is incrementing the value in the array indexed by s.charAt(i) - 'A'.
    What this loop does is that it counts up the number of occurrences of each letter in s.
    The reason for - 'A', is that it "shifts" the ascii/unicode value so that A - Z have values 0 - 25. And are thus more          suitable as an array index.
+   'A' - 'A' == 0
+   'B' - 'A' == 1
+   'C' - 'A' == 2
