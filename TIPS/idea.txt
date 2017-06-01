@@ -14,3 +14,4 @@
    'C' - 'A' == 2
    To understand this, you should understand, that Java treats char the same as (unsigned) short. Hence, you can make            calculations with char
 7. sum=new int[nums.length+1]; use length+1 to avoid "out of border"..
+8. boolean, return n==a; a is one of integer, so we have true or false after we have n = or != a;
