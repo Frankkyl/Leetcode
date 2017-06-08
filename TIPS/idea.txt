@@ -1,6 +1,6 @@
-1. split long logic to small ones step by step, by using simple "for" or "if" functions. 
+1. ll002:split long logic to small ones step by step, by using simple "for" or "if" functions. 
    With the fixed order, we have the data transfer.
-2. small functions could also be setup as subfunction under the solution class.
+2. ll003:small functions could also be setup as subfunction under the solution class.
 3. LinkedList:node=node.next;
 4. Binary Search:
    mid: GOOD:begin+(end-begin)/2;
