@@ -14,8 +14,8 @@ public class Test {
         }
         String lgtPrefix=strs[0];
         for(int i=0;i<strs.length;i++){
+            //int test=strs[i].indexOf(lgtPrefix);only for check purpose.
             while(strs[i].indexOf(lgtPrefix)!=0){
-                //int test=strs[i].indexOf(lgtPrefix);only for check purpose.
                 lgtPrefix=lgtPrefix.substring(0,lgtPrefix.length()-1);
                 if(lgtPrefix.isEmpty()){
                     return "";
