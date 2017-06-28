@@ -16,3 +16,9 @@
 7. sum=new int[nums.length+1]; use length+1 to avoid "out of border"..
 8. boolean, return n==a; a is one of integer, so we have true or false after we have n = or != a;
 9. to replace/find/remove a element from an array, u might start from 1 to n, then check by i & i-1, so no outofbound
+10. ?
+   >用法1 ：
+    用于问号表达式  条件表达式 ？程序块1 ：程序块2 ；
+    解释：如果条件表达式为真，则本程序语句执行程序块1，程序块1的值即为整个表达式的值， 否则为表达式2的值。
+    注意，java只有问号表达式，而没有问号语句，问号表达式加分号不能构成程序语句。
+    
